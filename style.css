@@ -1,0 +1,302 @@
+:root {
+    --main-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --lighter-color: #0d3e07;
+    --light-color: #ffffff;
+    --dark-color: #25505e;
+    --font-smaller: 14px;
+    --font-bigger: 20px;
+}
+header {
+    min-height: 100vh;
+    background-size: cover;
+}
+header .navbar a {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    color: var(--lighter-color);
+}
+header .navbar a:hover{
+    color: white;
+    transition: .2s;
+}
+
+.navigation .col {
+    display: flex;
+    justify-content: center;
+}
+.navigation .btn {
+    height: 5rem;
+    width: 10rem;
+    background-color:var(--lighter-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+}
+.navigation .btn:hover {
+    font-size: 25px;
+    transition: .3s;
+    color: white;
+}
+
+.navigation a:link {
+    text-decoration: none;
+}
+.navigation a:hover {
+    color: white;
+}
+
+header .search-box {
+    background-color: var(--light-color);
+    padding: 0;
+}
+header .search-text {
+    background-color:var(--light-color);
+    border-radius: 0;
+    border-style: none;
+
+}
+header .input-group label {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    color: var(--lighter-color);
+    font-size: 25px;
+    transform: top .5s;
+    padding: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+.travel-guide {
+    min-height: 35vh;
+    margin-top: 50px;
+
+}
+
+.toplist {
+    min-height: 40vh;
+}
+.toplist .container{
+    min-width: 40vh;
+    padding-bottom: 50px;
+}
+.toplist .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.toplist .container .explore {
+    height: 100px;
+}
+.toplist .container .explore a{
+    text-decoration: none;
+    color: var(--lighter-color);
+    font-size: var(--font-bigger);
+}
+
+/* ttd page */
+
+section .container ul li{
+
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+section .othernav .container ul li a{
+    text-decoration: none;
+    color: var(--lighter-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+section .container{
+    background-color: white;
+}
+
+section .othernav {
+    height: 5rem;
+}
+
+#logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    color: var(--lighter-color);
+}
+#logo{
+    color: var(--lighter-color);
+    transition: .2s;
+}
+.search-group {
+    background-image: url(/Resources/banaue.jpeg);
+    background-size: cover;
+}
+.search-group .search-box label {
+    position: absolute;
+    top: 18px;
+    left: 25px;
+    font-size: large;
+    font-weight: bold;
+}
+#searchbtn{
+    background-color: transparent;
+    border: 0;
+}
+
+/* content section */
+
+.content {
+    background-color: rgb(237, 239, 239);
+    max-height: 100%vh;
+}
+
+.content .container {
+    background-color: white;
+    max-width: 100vh;
+}
+
+/*item box ttd*/
+.content .container .main-card a{
+    text-decoration: none;
+    color: black;
+}
+
+.content .container ul {
+    float: left;
+    background-color:white;
+}
+.content .container ul .thumbimg{
+    height: 150px;
+    width: 150px ;
+}
+
+article {
+  width: 90%;
+  max-width: 75ch;
+  margin: 2rem auto;
+}
+
+h1 {
+  font-size: 1.75rem;
+  color: hsl(204, 100%, 29%);
+  margin: 1em 0  0.5em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: hsl(204, 100%, 29%);
+  margin: 1em 0 0.5em;
+}
+blockquote {
+  padding: 1rem;
+  background-color: hsl(204, 100%, 15%);
+  color: hsl(24, 100%, 85%);
+}
+
+blockquote {
+  padding: 1rem;
+  background-color: hsl(204, 100%, 15%);
+  color: hsl(24, 100%, 85%);
+
+}
+
+.column {
+    columns: 2;
+column-gap: 2rem;
+    column-rule: 2px solid hsl(300, 50%, 90%);
+  }
+
+img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: auto;
+}
+h2 {
+  margin-bottom: .5em;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+
+/* hover styles */
+.location-listing {
+  position: relative;
+}
+
+.location-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(90,0,10,0.4);
+  color: white;
+  
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-listing:hover .location-title {
+  opacity: 1;
+}
+
+.location-listing:hover .location-image img {
+  filter: blur(2px);
+}
+
+
+/* for touch screen devices */
+@media (hover: none) { 
+  .location-title {
+    opacity: 1;
+  }
+  .location-image img {
+    filter: blur(2px);
+  }
+}
+.card {
+  bbackground-color: rgba(41, 39, 39, 0.3);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn { 
+    width: 100%;
+    padding: 0;
+  }
+}

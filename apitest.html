@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '031f09e4e4mshfb658561c281222p115a75jsn6159f027ad1c',
+		'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+	}
+};
+
+      async function getLocationDetails() {
+        let link =
+          "https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=1924634&restaurant_tagcategory=10591&restaurant_tagcategory_standalone=10591&currency=USD&lunit=km&limit=30&open_now=false&lang=en_US";
+        const response = await fetch(link, options);
+        let data = await response.json();
+
+        console.log(data.data);
+
+        let txt = "";
+        for (let x in data.data) {
+          txt =`
+          <div class="item-box border">
+                    <div class="separator d-flex">
+                        <div class="item-image border">
+                            <img src="" alt="">
+                        </div>
+                        <div class="item-divider border">
+                            <div class="item-info border">
+                                <div class="">
+                                    <h5>Data Name:</h5>
+                                    <p>address</p> 
+                                    <p>cusine type</p> 
+                                    <p>price</p> 
+                                    <p>ratings</p> 
+                                  
+                                </div>
+                            </div>
+                            <div class="item-review border">
+                                <p>Reviews</p> 
+                                <p>web url</p> 
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                `
+
+
+
+          txt += data.data[x].name + "<br/>";
+          txt += data.data[x].address + "<br/>";
+          txt += data.data[x].ranking_category + "<br/>";
+          txt += data.data[x]. phone+ "<br/>";
+          txt += data.data[x].rating + "<br/>";
+          txt += data.data[x].description + "<br/>";
+          txt += data.data[x].web_url + "<br/>";
+          txt += data.data[x].write_review + "<br/>";
+          txt += "<br/><br/>";
+        }
+        document.getElementById("test").innerHTML = txt;
+      }
+      getLocationDetails();
+    </script>
+  </head>
+
+  
+  <body>
+    <div id="test"></div>
+  </body>
+</html>
